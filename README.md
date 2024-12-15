@@ -1,4 +1,4 @@
-**Kontrlola publicznego adresu IP**
+**Kontrola publicznego adresu IP**
 
 **Instrukcja uruchomienia usługi**
 
