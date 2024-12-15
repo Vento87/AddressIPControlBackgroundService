@@ -6,7 +6,7 @@ namespace AddressIPControlBackgroundService.Helpers
     public class NetManager
     {
         private readonly ILogger<Worker> _logger;
-        private readonly string _fileName; 
+        private readonly string _fileName;
         private readonly string _path;
 
         public string AddressIP { get; set; }
@@ -15,6 +15,7 @@ namespace AddressIPControlBackgroundService.Helpers
         {
             _logger = logger;
             _fileName = "AddressIP.json";
+
             _path = Path.Combine("/home/vento87/Desktop/_PublicAddress");
         }
 
@@ -43,10 +44,10 @@ namespace AddressIPControlBackgroundService.Helpers
         {
             var emailSender = new EmailSender(_logger);
 
-            string smtpServer = "smtp.office365.com";
-            int port = 587;
-            string fromEmail = "mail";
-            string password = "hasło";
+            string smtpServer = "smtp.wp.pl";
+            int port = 465;
+            string fromEmail = "e-mail";
+            string password = "password";
             string toEmail = "1987vento@gmail.com";
             string subject = $"[Home-BOT] [UWAGA] Twój adres IP został zmieniony!";
             string body = $"Twój nowy adres IP: {publicAddress}";
